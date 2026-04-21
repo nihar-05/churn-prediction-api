@@ -65,7 +65,7 @@ It supports both single-customer and batch prediction endpoints.
 The pickle file (`churn_prediction_model.pkl`) contains a **scikit-learn Pipeline** that includes:
 
 1. **Preprocessing** — column transformers for categorical encoding and numerical scaling
-2. **SMOTE** (via `imbalanced-learn`) — handles the class imbalance (~73% No / ~26% Yes)
+2. **SMOTE** (via `imbalanced-learn`) / **RandomUnderSampler** — to handle the class imbalance (~73% No / ~26% Yes)
 3. **Classifier** — trained binary classifier (e.g., Random Forest / Gradient Boosting)
 
 The pipeline was trained on the IBM Telco dataset after standard EDA and feature engineering.
